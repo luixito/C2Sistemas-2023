@@ -7,6 +7,7 @@ const PORT = process.env.PORT || 3001;
 const app = express();
 
 app.get("/api", (req, res) => {
+    res.set('Access-Control-Allow-Origin', '*');
     res.json({ message: "Hola desde el servidor!" });
   });
   
