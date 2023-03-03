@@ -8,7 +8,7 @@ function App() {
   const [data, setData] = React.useState(null);
 
   React.useEffect(() => {
-    fetch("http://localhost:3001/api")
+    fetch("http://ec2-54-183-87-160.us-west-1.compute.amazonaws.com:8080/api")
       .then((res) => res.json())
       .then((data) => setData(data.message));
   }, []);
